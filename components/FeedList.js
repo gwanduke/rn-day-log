@@ -5,11 +5,18 @@ import FeedListItem from './FeedListItem';
 // https://reactnative.dev/docs/scrollview#onscroll
 function FeedList({logs, onScrolledToBottom}) {
   const onScroll = e => {
+    if (!onScrolledToBottom) {
+      return;
+    }
+
     const {contentSize, layoutMeasurement, contentOffset} = e.nativeEvent;
     const distanceFromBotton =
       contentSize.height - layoutMeasurement.height - contentOffset.y;
 
-    if (distanceFromBotton < 72) {
+    if (
+      contentSize.height > layoutMeasurement.height + 72 &&
+      distanceFromBotton < 72
+    ) {
       onScrolledToBottom(true);
     } else {
       onScrolledToBottom(false);
