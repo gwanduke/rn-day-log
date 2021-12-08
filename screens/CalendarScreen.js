@@ -1,5 +1,5 @@
 import {format} from 'date-fns';
-import React, {useContext, useState} from 'react';
+import React, {useContext, useMemo, useState} from 'react';
 import {StyleSheet} from 'react-native';
 import CalendarView from '../components/CalendarView';
 import LogContext from '../contexts/LogContext';
@@ -11,11 +11,15 @@ function CalendarScreen() {
     format(new Date(), 'yyyy-MM-dd'),
   );
 
-  const markedDates = logs.reduce((acc, cur) => {
-    const formattedDate = format(new Date(cur.date), 'yyyy-MM-dd');
-    acc[formattedDate] = {marked: true};
-    return acc;
-  });
+  const markedDates = useMemo(
+    () =>
+      logs.reduce((acc, cur) => {
+        const formattedDate = format(new Date(cur.date), 'yyyy-MM-dd');
+        acc[formattedDate] = {marked: true};
+        return acc;
+      }),
+    [logs],
+  );
 
   const filteredLogs = logs.filter(
     log => format(new Date(log.date), 'yyyy-MM-dd') === selectedDate,
