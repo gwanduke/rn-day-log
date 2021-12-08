@@ -3,7 +3,7 @@ import {FlatList, StyleSheet, View} from 'react-native';
 import FeedListItem from './FeedListItem';
 
 // https://reactnative.dev/docs/scrollview#onscroll
-function FeedList({logs, onScrolledToBottom}) {
+function FeedList({logs, onScrolledToBottom, ListHeaderComponent}) {
   const onScroll = e => {
     if (!onScrolledToBottom) {
       return;
@@ -31,6 +31,7 @@ function FeedList({logs, onScrolledToBottom}) {
       keyExtractor={log => log.id}
       ItemSeparatorComponent={() => <View style={styles.separator} />}
       onScroll={onScroll}
+      ListHeaderComponent={ListHeaderComponent}
     />
   );
 }
