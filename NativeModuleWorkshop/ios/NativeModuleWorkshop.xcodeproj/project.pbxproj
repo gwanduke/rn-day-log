@@ -12,6 +12,8 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		4288B49E27622748007A2454 /* RCTAlertModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4288B49D27622748007A2454 /* RCTAlertModule.m */; };
+		4288B49F27622748007A2454 /* RCTAlertModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4288B49D27622748007A2454 /* RCTAlertModule.m */; };
 		4E757F1546D794208705C6DC /* libPods-NativeModuleWorkshop-NativeModuleWorkshopTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9584BC57CB411EA7E0115AB8 /* libPods-NativeModuleWorkshop-NativeModuleWorkshopTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -37,6 +39,8 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = NativeModuleWorkshop/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = NativeModuleWorkshop/main.m; sourceTree = "<group>"; };
 		339BDB5DC808F6348E5F29CE /* Pods-NativeModuleWorkshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeModuleWorkshop.release.xcconfig"; path = "Target Support Files/Pods-NativeModuleWorkshop/Pods-NativeModuleWorkshop.release.xcconfig"; sourceTree = "<group>"; };
+		4288B49C276226F5007A2454 /* RCTAlertModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTAlertModule.h; sourceTree = "<group>"; };
+		4288B49D27622748007A2454 /* RCTAlertModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTAlertModule.m; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = NativeModuleWorkshop/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91E92667F05B38A618A4E13E /* libPods-NativeModuleWorkshop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NativeModuleWorkshop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9584BC57CB411EA7E0115AB8 /* libPods-NativeModuleWorkshop-NativeModuleWorkshopTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NativeModuleWorkshop-NativeModuleWorkshopTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +96,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				4288B49C276226F5007A2454 /* RCTAlertModule.h */,
+				4288B49D27622748007A2454 /* RCTAlertModule.m */,
 			);
 			name = NativeModuleWorkshop;
 			sourceTree = "<group>";
@@ -145,7 +151,6 @@
 				D40DAD96593A18B7ED1AA60D /* Pods-NativeModuleWorkshop-NativeModuleWorkshopTests.debug.xcconfig */,
 				B9EFA111149A283F47BD7750 /* Pods-NativeModuleWorkshop-NativeModuleWorkshopTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -403,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4288B49F27622748007A2454 /* RCTAlertModule.m in Sources */,
 				00E356F31AD99517003FC87E /* NativeModuleWorkshopTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +419,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				4288B49E27622748007A2454 /* RCTAlertModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
