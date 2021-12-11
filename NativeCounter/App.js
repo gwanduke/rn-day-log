@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 import Counter from './Counter';
 
 function App() {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(1);
 
   const onPressLeftButton = () => {
     setValue(value + 1);
